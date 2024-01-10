@@ -41,3 +41,16 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* Styling that's not the CSS reset :3 */
+:root {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.header-section {
+    padding: 1.5rem;
+    background-color: #7FBEEB;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
