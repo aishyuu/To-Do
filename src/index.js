@@ -1,4 +1,5 @@
 import "./style.css";
+import { dataSetup } from "./dataSetup";
 
 function initialSetup() {
     const allContentDiv = document.querySelector("#all-content")
@@ -17,6 +18,7 @@ function initialSetup() {
     allContentDiv.appendChild(informationDiv);
 
     // Data Setup Function Run
+    dataSetup();
 }
 
 initialSetup()
