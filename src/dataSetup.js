@@ -4,7 +4,7 @@ function dataSetup() {
 
     // Creating Projects div
     const projectsDiv = document.createElement("div");
-    projectsDiv.classList.add("information-section");
+    projectsDiv.classList.add("projects-section");
     informationDiv.appendChild(projectsDiv);
 
     // Creating Todo div
