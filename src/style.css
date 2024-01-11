@@ -72,10 +72,35 @@ table {
 	background-color: #AFBED1;
 	border-top: 1px solid rgb(75, 75, 75);
 	border-right: 1px solid rgb(75, 75, 75);
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
 }
 
 .todo-section {
 	grid-area: 1fr / 2fr / 2fr / 3fr;
 	background-color: #DBD8F0;
 	border-top: 1px solid rgb(75, 75, 75);
+}
+
+.project-name-div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.project-selected {
+	font-weight: bold;
+}
+
+.project-quantity {
+	display: flex;
+	width: 25px;
+	height: 25px;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #EAC5D8;
+	border-radius: 50%;
+	background-color: #EAC5D8;
 }
