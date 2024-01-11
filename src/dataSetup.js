@@ -30,11 +30,47 @@ function dataSetup() {
         const todoItem = document.createElement("div");
         todoItem.classList.add("todo-indiv");
 
+        switch (element.priority) {
+            case "Red":
+                todoItem.classList.add("priority-red");
+                break;
+            case "Yellow":
+                todoItem.classList.add("priority-yellow");
+                break;
+            case "Green":
+                todoItem.classList.add("priority-green");
+            break;
+        
+            default:
+                break;
+        }
+
+        // Todo Left Side
+        const todoLeft = document.createElement("div");
+        todoLeft.classList.add("todo-left");
+
+        // Todo Title
         const todoTitle = document.createElement("h1");
         todoTitle.classList.add("todo-title");
-        todoItem.appendChild(todoTitle);
+        todoTitle.textContent = element.title;
 
+        todoLeft.appendChild(todoTitle)
+
+        // Todo Right Side
+        const todoRight = document.createElement("div");
+        todoRight.classList.add("todo-right");
+
+        // Todo Description
+        const todoDesc = document.createElement("button");
+        todoDesc.classList.add("todo-detail-btn");
+        todoDesc.textContent = "DETAILS"
         
+        todoRight.appendChild(todoDesc)
+
+        todoItem.append(todoLeft)
+        todoItem.append(todoRight)
+
+        todoDiv.appendChild(todoItem)
     }
 }
 

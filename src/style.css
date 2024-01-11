@@ -90,6 +90,18 @@ table {
 	align-items: center;
 }
 
+.priority-red {
+	border-left: 2px solid red;
+}
+
+.priority-yellow {
+	border-left: 2px solid yellow;
+}
+
+.priority-green {
+	border-left: 2px solid green;
+}
+
 .project-selected {
 	font-weight: bold;
 }
