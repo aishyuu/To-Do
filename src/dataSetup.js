@@ -1,5 +1,6 @@
 import data from './data/dummyData.json'
 import { projectDisplay } from './components/projectName';
+import { format } from 'date-fns';
 
 function dataSetup() {
     // Get information div
@@ -64,6 +65,9 @@ function dataSetup() {
         const todoDesc = document.createElement("button");
         todoDesc.classList.add("todo-detail-btn");
         todoDesc.textContent = "DETAILS"
+
+        // Todo Date
+        
         
         todoRight.appendChild(todoDesc)
 

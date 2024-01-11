@@ -90,18 +90,6 @@ table {
 	align-items: center;
 }
 
-.priority-red {
-	border-left: 2px solid red;
-}
-
-.priority-yellow {
-	border-left: 2px solid yellow;
-}
-
-.priority-green {
-	border-left: 2px solid green;
-}
-
 .project-selected {
 	font-weight: bold;
 }
@@ -116,4 +104,36 @@ table {
 	border: 1px solid #EAC5D8;
 	border-radius: 50%;
 	background-color: #EAC5D8;
+}
+
+.todo-section {
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.todo-indiv {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.25rem;
+	background-color: #AFBED1;
+}
+
+.priority-red {
+	border-left: 4px solid red;
+}
+
+.priority-yellow {
+	border-left: 4px solid yellow;
+}
+
+.priority-green {
+	border-left: 4px solid green;
+}
+
+.todo-right {
+	display: flex;
+	gap: 1rem;
 }
