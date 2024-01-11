@@ -1,4 +1,5 @@
 import data from './data/dummyData.json'
+import { projectDisplay } from './components/projectName';
 
 function dataSetup() {
     // Get information div
@@ -17,20 +18,7 @@ function dataSetup() {
     // Putting data on the screen
     for (let index = 0; index < data.projects.length; index++) {
         const element = data.projects[index];
-        const projectDiv = document.createElement("div");
-        projectDiv.classList.add("project-name-div");
-
-        const projectName = document.createElement("h1");
-        projectName.classList.add("project-name")
-        projectName.textContent = element.projectName
-        projectDiv.appendChild(projectName)
-
-        const projectNotesQuant = document.createElement("h2");
-        projectNotesQuant.classList.add("project-quantity");
-        projectNotesQuant.textContent = element.todoItemAmount
-        projectDiv.appendChild(projectNotesQuant)
-
-        projectsDiv.appendChild(projectDiv)
+        projectsDiv.appendChild(projectDisplay(element))
     }
 
     const firstProject = document.querySelector('.project-name')
@@ -38,7 +26,15 @@ function dataSetup() {
 
     for (let index = 0; index < data.projects[0].todoList.length; index++) {
         const element = data.projects[0].todoList[index];
-        console.log(element)
+        console.log(element);
+        const todoItem = document.createElement("div");
+        todoItem.classList.add("todo-indiv");
+
+        const todoTitle = document.createElement("h1");
+        todoTitle.classList.add("todo-title");
+        todoItem.appendChild(todoTitle);
+
+        
     }
 }
 
