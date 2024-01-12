@@ -1,6 +1,8 @@
 import data from './data/dummyData.json'
 import { projectDisplay } from './components/projectName';
 import { format } from 'date-fns';
+import EditIcon from './assets/icons/edit_FILL0_wght400_GRAD0_opsz24.svg'
+import DeleteIcon from './assets/icons/delete_FILL0_wght400_GRAD0_opsz24.svg'
 
 function dataSetup() {
     // Get information div
@@ -61,7 +63,7 @@ function dataSetup() {
         const todoRight = document.createElement("div");
         todoRight.classList.add("todo-right");
 
-        // Todo Description
+        // Todo Detail Button
         const todoDesc = document.createElement("button");
         todoDesc.classList.add("todo-detail-btn");
         todoDesc.textContent = "DETAILS"
@@ -76,6 +78,17 @@ function dataSetup() {
         
         todoRight.appendChild(todoDate);
         
+        // Todo Edit Button
+        const todoEditButton = document.createElement("img");
+        todoEditButton.src = EditIcon;
+        todoEditButton.classList.add("todo-edit-btn");
+        todoRight.appendChild(todoEditButton);
+
+        // Todo Delete Button
+        const todoDeleteButton = document.createElement("img");
+        todoDeleteButton.src = DeleteIcon;
+        todoDeleteButton.classList.add("todo-delete-btn");
+        todoRight.appendChild(todoDeleteButton);
 
         todoItem.append(todoLeft)
         todoItem.append(todoRight)

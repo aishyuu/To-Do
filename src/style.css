@@ -117,7 +117,7 @@ table {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 0.25rem;
+	padding: 0.6rem;
 	background-color: #AFBED1;
 }
 
@@ -137,4 +137,16 @@ table {
 	display: flex;
 	gap: 1rem;
 	align-items: center;
+	font-size: 0.7rem;
+}
+
+.todo-detail-btn {
+	font-size: 0.6rem;
+	padding: 0.25rem 0.5rem;
+}
+
+.todo-edit-btn,
+.todo-delete-btn {
+	width: 1.2rem;
+	height: 1.2rem;
 }
