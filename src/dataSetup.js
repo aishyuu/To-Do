@@ -66,10 +66,16 @@ function dataSetup() {
         todoDesc.classList.add("todo-detail-btn");
         todoDesc.textContent = "DETAILS"
 
-        // Todo Date
-        
-        
         todoRight.appendChild(todoDesc)
+
+        // Todo Date
+        const datePieces = element.due.split("/")
+        const todoDate = document.createElement("p");
+        todoDate.classList.add("todo-date");
+        todoDate.textContent = format(new Date(parseInt(datePieces[0]), parseInt(datePieces[1]) - 1, parseInt(datePieces[2])), "MMM do")
+        
+        todoRight.appendChild(todoDate);
+        
 
         todoItem.append(todoLeft)
         todoItem.append(todoRight)
