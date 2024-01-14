@@ -150,3 +150,29 @@ table {
 	width: 1.2rem;
 	height: 1.2rem;
 }
+
+.modal-backdrop {
+	position:fixed;
+    padding:0;
+    margin:0;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+    top:0;
+    left:0;
+
+    width: 100%;
+    height: 100%;
+    background:rgba(0, 0, 0, 0.5);
+}
+
+.modal-content-div {
+	width: min(500px, 80vw);
+	height: 40vh;
+
+	border-radius: 1rem;
+
+	background-color: white;
+}

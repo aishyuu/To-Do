@@ -2,6 +2,7 @@ import { format } from 'date-fns';
 import data from '../data/dummyData.json'
 import EditIcon from '../assets/icons/edit_FILL0_wght400_GRAD0_opsz24.svg'
 import DeleteIcon from '../assets/icons/delete_FILL0_wght400_GRAD0_opsz24.svg'
+import { todoModal } from './todoModal';
 
 function projectTodoIndiv(todoDiv, index) {
     const element = data.projects[0].todoList[index];
@@ -44,7 +45,7 @@ function projectTodoIndiv(todoDiv, index) {
     todoDesc.textContent = "DETAILS"
 
     todoDesc.addEventListener('click', () => {
-        console.log(element);
+        todoModal(element);
     })
 
     todoRight.appendChild(todoDesc)
