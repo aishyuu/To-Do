@@ -190,3 +190,19 @@ table {
 .modal-close-button:hover {
 	cursor: pointer;
 }
+
+.modal-info-div {
+	padding: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.modal-title {
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.modal-desc {
+	font-style: italic;
+}
