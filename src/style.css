@@ -176,3 +176,17 @@ table {
 
 	background-color: white;
 }
+
+.modal-close-div {
+	display: flex;
+	justify-content: end;
+	padding: 1rem;
+}
+
+.modal-close-button {
+	font-size: 1.5rem;
+}
+
+.modal-close-button:hover {
+	cursor: pointer;
+}
