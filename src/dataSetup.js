@@ -16,17 +16,17 @@ function dataSetup() {
     todoDiv.classList.add("todo-section");
     informationDiv.appendChild(todoDiv);
 
-    // Putting data on the screen
+    // Putting project names on left side of the screen
     for (let index = 0; index < data.projects.length; index++) {
         const element = data.projects[index];
-        projectsDiv.appendChild(projectDisplay(element))
+        projectsDiv.appendChild(projectDisplay(element, index))
     }
 
     const firstProject = document.querySelector('.project-name')
     firstProject.classList.add("project-selected")
 
     for (let index = 0; index < data.projects[0].todoList.length; index++) {
-        projectTodoIndiv(todoDiv, index)
+        projectTodoIndiv(todoDiv, index, 0)
     }
 }
 

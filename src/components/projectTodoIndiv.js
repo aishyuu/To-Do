@@ -3,9 +3,10 @@ import data from '../data/dummyData.json'
 import EditIcon from '../assets/icons/edit_FILL0_wght400_GRAD0_opsz24.svg'
 import DeleteIcon from '../assets/icons/delete_FILL0_wght400_GRAD0_opsz24.svg'
 import { todoModal } from './todoModal';
+import { editModal } from './editModal';
 
-function projectTodoIndiv(todoDiv, index) {
-    const element = data.projects[0].todoList[index];
+function projectTodoIndiv(todoDiv, index, projectIndex) {
+    const element = data.projects[projectIndex].todoList[index];
     const todoItem = document.createElement("div");
     todoItem.classList.add("todo-indiv");
 
@@ -64,11 +65,19 @@ function projectTodoIndiv(todoDiv, index) {
     todoEditButton.classList.add("todo-edit-btn");
     todoRight.appendChild(todoEditButton);
 
+    todoEditButton.addEventListener('click', () => {
+        editModal()
+    })
+
     // Todo Delete Button
     const todoDeleteButton = document.createElement("img");
     todoDeleteButton.src = DeleteIcon;
     todoDeleteButton.classList.add("todo-delete-btn");
     todoRight.appendChild(todoDeleteButton);
+
+    todoDeleteButton.addEventListener('click', () => {
+        console.log("Delete Clicked");
+    })
 
     todoItem.append(todoLeft)
     todoItem.append(todoRight)

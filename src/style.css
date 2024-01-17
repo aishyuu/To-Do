@@ -151,6 +151,11 @@ table {
 	height: 1.2rem;
 }
 
+.todo-edit-btn:hover,
+.todo-delete-btn:hover{
+	cursor: pointer;
+}
+
 .modal-backdrop {
 	position:fixed;
     padding:0;
@@ -170,7 +175,7 @@ table {
 
 .modal-content-div {
 	width: min(500px, 80vw);
-	height: 40vh;
+	height: 30vh;
 
 	border-radius: 1rem;
 
@@ -192,7 +197,7 @@ table {
 }
 
 .modal-info-div {
-	padding: 1.5rem;
+	padding: 0rem 1.5rem;
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;

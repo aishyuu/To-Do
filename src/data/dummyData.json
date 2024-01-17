@@ -28,7 +28,7 @@
                     "title": "Gym",
                     "desc": "Go gym for 30 min, weights",
                     "due": "01/10/2023",
-                    "priority": "red",
+                    "priority": "Red",
                     "check": false
                 }
             ]
