@@ -60,6 +60,7 @@ function editModal(element, index, projectIndex) {
     const modalEditDate = document.createElement("input");
     modalEditDate.setAttribute("type", "date");
     const splitDate = element.due.split("/")
+    modalEditDate.value = `${splitDate[0]}-${splitDate[1]}-${splitDate[2]}`
     console.log(`${splitDate[0]}-${splitDate[1]}-${splitDate[2]}`)
     modalContentDiv.append(modalEditDate);
 
