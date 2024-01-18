@@ -7,6 +7,7 @@ import { editModal } from './editModal';
 function projectTodoIndiv(todoDiv, index, projectIndex) {
     const data = JSON.parse(localStorage.getItem("todoListData"))
     const element = data.projects[projectIndex].todoList[index];
+    console.log(element)
     const todoItem = document.createElement("div");
     todoItem.classList.add("todo-indiv");
 
@@ -52,7 +53,7 @@ function projectTodoIndiv(todoDiv, index, projectIndex) {
     todoRight.appendChild(todoDesc)
 
     // Todo Date
-    const datePieces = element.due.split("/")
+    const datePieces = element.due.split("-")
     const todoDate = document.createElement("p");
     todoDate.classList.add("todo-date");
     todoDate.textContent = format(new Date(parseInt(datePieces[0]), parseInt(datePieces[1]) - 1, parseInt(datePieces[2])), "MMM do")

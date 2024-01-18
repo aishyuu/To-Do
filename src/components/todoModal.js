@@ -46,7 +46,7 @@ function todoModal(element) {
     // Modal Due Date
     const modalDate = document.createElement("p");
     modalDate.classList.add("modal-due");
-    const datePieces = element.due.split("/")
+    const datePieces = element.due.split("-")
     modalDate.textContent = `Due: ${format(new Date(parseInt(datePieces[0]), parseInt(datePieces[1]) - 1, parseInt(datePieces[2])), "MMM do, yyyy")}`
     modalContentDiv.appendChild(modalDate)
 
