@@ -1,8 +1,13 @@
-import data from './data/dummyData.json'
+import dummyData from './data/dummyData.json'
 import { projectDisplay } from './components/projectName';
 import { projectTodoIndiv } from './components/projectTodoIndiv';
 
 function dataSetup() {
+    if(!localStorage.getItem("todoListData")) {
+        localStorage.setItem("todoListData", JSON.stringify(dummyData))
+    }
+    const data = JSON.parse(localStorage.getItem("todoListData"))
+    console.log(data)
     // Get information div
     const informationDiv = document.querySelector('.information-section');
 

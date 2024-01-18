@@ -1,11 +1,11 @@
 import { format } from 'date-fns';
-import data from '../data/dummyData.json'
 import EditIcon from '../assets/icons/edit_FILL0_wght400_GRAD0_opsz24.svg'
 import DeleteIcon from '../assets/icons/delete_FILL0_wght400_GRAD0_opsz24.svg'
 import { todoModal } from './todoModal';
 import { editModal } from './editModal';
 
 function projectTodoIndiv(todoDiv, index, projectIndex) {
+    const data = JSON.parse(localStorage.getItem("todoListData"))
     const element = data.projects[projectIndex].todoList[index];
     const todoItem = document.createElement("div");
     todoItem.classList.add("todo-indiv");
@@ -66,7 +66,7 @@ function projectTodoIndiv(todoDiv, index, projectIndex) {
     todoRight.appendChild(todoEditButton);
 
     todoEditButton.addEventListener('click', () => {
-        editModal()
+        editModal(element, index, projectIndex)
     })
 
     // Todo Delete Button

@@ -7,14 +7,14 @@
                 {
                     "title": "Swim",
                     "desc": "Go swim for 30 min, freestyle",
-                    "due": "2023/1/10",
+                    "due": "2023/01/10",
                     "priority": "Green",
                     "check": false
                 },
                 {
                     "title": "Shop for wood",
                     "desc": "Home Depot time baybee!",
-                    "due": "2023/1/12",
+                    "due": "2023/01/12",
                     "priority": "Yellow",
                     "check": true
                 }
@@ -27,7 +27,7 @@
                 {
                     "title": "Gym",
                     "desc": "Go gym for 30 min, weights",
-                    "due": "01/10/2023",
+                    "due": "2023/01/13",
                     "priority": "Red",
                     "check": false
                 }

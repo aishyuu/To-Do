@@ -47,6 +47,10 @@ table {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+textarea {
+	resize: none;
+}
+
 #all-content {
 	height: 100vh;
     width: 100vw;
@@ -90,8 +94,16 @@ table {
 	align-items: center;
 }
 
+.project-name:hover {
+	cursor: pointer;
+}
+
 .project-selected {
 	font-weight: bold;
+}
+
+.project-selected:hover {
+	cursor: default;
 }
 
 .project-quantity {
@@ -173,13 +185,18 @@ table {
     background:rgba(0, 0, 0, 0.5);
 }
 
-.modal-content-div {
+.modal-content-div,
+.modal-content-div-edit {
 	width: min(500px, 80vw);
 	height: 30vh;
 
 	border-radius: 1rem;
 
 	background-color: white;
+}
+
+.modal-content-div-edit {
+	height: 40vh;
 }
 
 .modal-close-div {
@@ -210,4 +227,9 @@ table {
 
 .modal-desc {
 	font-style: italic;
+}
+
+.modal-edit-priority {
+	display: flex;
+	gap: 1rem;
 }

@@ -1,5 +1,4 @@
 import { projectTodoIndiv } from "./projectTodoIndiv";
-import data from '../data/dummyData.json'
 
 function projectDisplay(element, index) {
     const projectDiv = document.createElement("div");
@@ -10,8 +9,10 @@ function projectDisplay(element, index) {
     projectName.textContent = element.projectName;
     projectDiv.appendChild(projectName);
 
+    // Transitioning from one set of project todos to another
     projectName.addEventListener('click', () => {
         if(!projectName.classList.contains('project-selected')) {
+            const data = JSON.parse(localStorage.getItem("todoListData"))
             const currentSelected = document.querySelector('.project-selected');
             currentSelected.classList.remove('project-selected')
             projectName.classList.add("project-selected")
