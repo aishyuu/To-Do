@@ -3,6 +3,7 @@ import EditIcon from '../assets/icons/edit_FILL0_wght400_GRAD0_opsz24.svg'
 import DeleteIcon from '../assets/icons/delete_FILL0_wght400_GRAD0_opsz24.svg'
 import { todoModal } from './todoModal';
 import { editModal } from './editModal';
+import { refresh } from '../Utility/refresh';
 
 function projectTodoIndiv(todoDiv, index, projectIndex) {
     const data = JSON.parse(localStorage.getItem("todoListData"))
@@ -77,7 +78,9 @@ function projectTodoIndiv(todoDiv, index, projectIndex) {
     todoRight.appendChild(todoDeleteButton);
 
     todoDeleteButton.addEventListener('click', () => {
-        console.log("Delete Clicked");
+        data.projects[projectIndex].todoItemAmount -= 1;
+        const newInfo = data.projects[projectIndex].todoList.splice(index, 1)
+        console.log(newInfo)
     })
 
     todoItem.append(todoLeft)
