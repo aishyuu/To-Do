@@ -1,5 +1,6 @@
 import "./style.css";
 import { dataSetup } from "./dataSetup";
+import { addModal } from "./components/addModal";
 
 function initialSetup() {
     const allContentDiv = document.querySelector("#all-content")
@@ -19,6 +20,16 @@ function initialSetup() {
 
     // Data Setup Function Run
     dataSetup();
+
+    const addButton = document.createElement("button");
+    addButton.classList.add("add-button")
+    addButton.textContent = "+"
+    
+    allContentDiv.appendChild(addButton)
+
+    addButton.addEventListener("click", () => {
+        addModal()
+    })
 }
 
 initialSetup()
