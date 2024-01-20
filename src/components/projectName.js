@@ -1,6 +1,6 @@
 import { projectTodoIndiv } from "./projectTodoIndiv";
 
-function projectDisplay(element, index) {
+function projectDisplay(element, index, currentIndex) {
     const projectDiv = document.createElement("div");
     projectDiv.classList.add("project-name-div");
 
@@ -8,6 +8,10 @@ function projectDisplay(element, index) {
     projectName.classList.add("project-name");
     projectName.textContent = element.projectName;
     projectDiv.appendChild(projectName);
+
+    if(index === currentIndex) {
+        projectName.classList.add("project-selected")
+    }
 
     // Transitioning from one set of project todos to another
     projectName.addEventListener('click', () => {

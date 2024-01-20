@@ -24,11 +24,11 @@ function dataSetup() {
     // Putting project names on left side of the screen
     for (let index = 0; index < data.projects.length; index++) {
         const element = data.projects[index];
-        projectsDiv.appendChild(projectDisplay(element, index))
+        projectsDiv.appendChild(projectDisplay(element, index, 0))
     }
 
-    const firstProject = document.querySelector('.project-name')
-    firstProject.classList.add("project-selected")
+    // const firstProject = document.querySelector('.project-name')
+    // firstProject.classList.add("project-selected")
 
     for (let index = 0; index < data.projects[0].todoList.length; index++) {
         projectTodoIndiv(todoDiv, index, 0)

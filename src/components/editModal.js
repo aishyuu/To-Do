@@ -1,3 +1,5 @@
+import { refresh } from "../Utility/refresh";
+
 function editModal(element, index, projectIndex) {
     const body = document.querySelector("body")
     console.log(element)
@@ -50,8 +52,9 @@ function editModal(element, index, projectIndex) {
         // Clear Modal
         const entireModal = document.querySelector(".modal-backdrop");
         entireModal.remove()
-        // Refresh Everything
 
+        // Refresh Everything
+        refresh(projectIndex)
     })
     
     // Title input
