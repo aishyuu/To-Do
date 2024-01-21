@@ -88,21 +88,25 @@ textarea {
 	border-top: 1px solid rgb(75, 75, 75);
 }
 
-.project-name-div {
+.project-name-div,
+.add-project-selector {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 
-.project-name:hover {
+.project-name:hover,
+.add-project-selector {
 	cursor: pointer;
 }
 
-.project-selected {
+.project-selected,
+.add-option-selected {
 	font-weight: bold;
 }
 
-.project-selected:hover {
+.project-selected:hover
+.add-option-selected {
 	cursor: default;
 }
 
@@ -186,7 +190,8 @@ textarea {
 }
 
 .modal-content-div,
-.modal-content-div-edit {
+.modal-content-div-edit,
+.modal-content-div-add {
 	width: min(500px, 80vw);
 	height: 30vh;
 
@@ -197,6 +202,10 @@ textarea {
 
 .modal-content-div-edit {
 	height: 40vh;
+}
+
+.modal-content-div-add {
+	height: 50vh;
 }
 
 .modal-close-div {
@@ -243,4 +252,35 @@ textarea {
 	font-size: 1.5rem;
 	border-radius: 50%;
 	border: none;
+}
+
+.modal-content-add {
+	display: grid;
+	grid-template: 1fr / 1fr 3fr;
+}
+
+.modal-left-add {
+	grid-area: 1 / 1 / 2 / 2;
+	height: 100%;
+	display: flex;
+	gap: 2rem;
+	flex-direction: column;
+	padding-left: 1rem;
+	border-right: 1px solid gray;
+}
+
+.add-project-selector {
+	font-size: 1.5rem;
+}
+
+.modal-right-add {
+	grid-area: 1 / 2 / 2 / 3;
+	height: 100%;
+	padding: 0 1.5rem;
+}
+
+.project-add-form {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
 }
