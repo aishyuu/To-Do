@@ -8,7 +8,6 @@ import { refresh } from '../Utility/refresh';
 function projectTodoIndiv(todoDiv, index, projectIndex) {
     const data = JSON.parse(localStorage.getItem("todoListData"))
     const element = data.projects[projectIndex].todoList[index];
-    console.log(element)
     const todoItem = document.createElement("div");
     todoItem.classList.add("todo-indiv");
 
@@ -78,9 +77,32 @@ function projectTodoIndiv(todoDiv, index, projectIndex) {
     todoRight.appendChild(todoDeleteButton);
 
     todoDeleteButton.addEventListener('click', () => {
-        data.projects[projectIndex].todoItemAmount -= 1;
-        const newInfo = data.projects[projectIndex].todoList.splice(index, 1)
-        console.log(newInfo)
+        
+        if(data.projects[projectIndex].todoList.length === 1) {
+            console.log("This shit the last one")
+            if(data.projects.length === 1) {
+                data.projects = []
+            } else {
+                data.projects.splice(projectIndex, 1)[0]
+                localStorage.setItem("todoListData", JSON.stringify(data))
+            }
+            refresh(0)
+        } else {
+            data.projects[projectIndex].todoItemAmount -= 1;
+            let changedProjectList = []
+            for (let elementIndex = 0; elementIndex < data.projects[projectIndex].todoList.length; elementIndex++) {
+                const element = data.projects[projectIndex].todoList[elementIndex];
+                if(elementIndex != index) {
+                    changedProjectList.push(element)
+                }
+            }
+            console.log(changedProjectList)
+            const newInfo = data.projects[projectIndex].todoList = changedProjectList
+            data.projects[projectIndex].todoList = newInfo
+            localStorage.setItem("todoListData", JSON.stringify(data))
+            
+            refresh(projectIndex)
+        }
     })
 
     todoItem.append(todoLeft)

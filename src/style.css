@@ -229,6 +229,10 @@ textarea {
 	gap: 1rem;
 }
 
+.modal-add-todo-div {
+	padding: 0;
+}
+
 .modal-title {
 	font-size: 2rem;
 	font-weight: bold;
@@ -276,6 +280,7 @@ textarea {
 .modal-right-add {
 	grid-area: 1 / 2 / 2 / 3;
 	height: 100%;
+	width: 80%;
 	padding: 0 1.5rem;
 }
 

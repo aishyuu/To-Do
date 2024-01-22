@@ -6,6 +6,7 @@ function dataSetup() {
     if(!localStorage.getItem("todoListData")) {
         localStorage.setItem("todoListData", JSON.stringify(dummyData))
     }
+    // localStorage.removeItem("todoListData")
     const data = JSON.parse(localStorage.getItem("todoListData"))
     console.log(data)
     // Get information div
